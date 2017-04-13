@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="movie title"
+        android:layout_marginRight="10dp"
+        android:id="@+id/movieTitle"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/moviePoster"
+        android:layout_toEndOf="@+id/moviePoster" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/moviePoster"
+        android:src="@mipmap/ic_launcher"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="1997"
+        android:id="@+id/movieYear"
+        android:layout_alignTop="@+id/movieTitle"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginRight="8dp"
+        android:text="Medium Text"
+        android:id="@+id/movieOverview"
+        android:layout_toStartOf="@id/movieYear"
+        android:layout_toLeftOf="@id/movieYear"
+        android:textSize="10sp"
+        android:layout_below="@+id/movieTitle"
+        android:layout_alignLeft="@+id/movieTitle"
+        android:layout_alignStart="@+id/movieTitle"
+        android:layout_alignBottom="@+id/moviePoster"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="2.5"
+        android:scaleY="2.5"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/movieFav"
+        android:src="@mipmap/ic_star_not"
+        android:layout_below="@id/movieYear"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="8.6"
+        android:id="@+id/movieRating"
+        android:textSize="22sp"
+        android:layout_alignBottom="@+id/movieOverview"
+        android:layout_alignRight="@+id/movieYear"
+        android:layout_alignEnd="@+id/movieYear"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_blue_dark"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/moviePoster"
+        android:padding="20dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Trailers"/>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:id="@+id/trailersLV">
+
+        </ListView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reviews"
+            android:layout_marginTop="20dp"
+            android:gravity="center"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:id="@+id/reviewsLV">
+
+        </ListView>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
